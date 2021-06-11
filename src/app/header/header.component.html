@@ -2,29 +2,42 @@
   <div class="wrapper">
 
     <div class="left">
-        <H1>Welkom @ Gridz</H1>
-        <p>Geopende Vakken: {{nButtonsClicked}}</p>
+      <H1>Welkom @ Gridz</H1>
+      <p>Geopende Vakken: {{nButtonsClicked}}</p>
     </div>
     <div class="center">
-      <div><!-- TODO werkend maken-->
-        <label class="label-margin" for="width">Breedte Grid: </label>
-        <input
-          type="text"
-          id="width"
-          #width
-          placeholder="breedte invoeren aub"><br>
+      <table id="table">
+        <tr>
+          <td>
+            <label class="label-margin" for="width">Breedte Grid: </label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="width"
+              #width
+              placeholder="breedte invoeren aub">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-margin" for="height">Hoogte Grid: </label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="height"
+              #height
+              name="height"
+              placeholder="hoogte invoeren aub">
+          </td>
+        </tr>
+        <tr align="center" >
 
-        <label class="label-margin"for="height">Hoogte Grid: </label>
-        <input
-          type="text"
-          id="height"
-          #height
-          name="height"
-          placeholder="hoogte invoeren aub"
-        >
-        <br>
-        <button type="button" (click)="setButtonClicked(width.value,height.value)">Set</button>
-        </div>
+            <button id="set-btn" type="button" (click)="setButtonClicked(width.value,height.value)">Set</button>
+
+        </tr>
+      </table>
     </div>
     <div class="right">
       <p>Bas Brunink</p>

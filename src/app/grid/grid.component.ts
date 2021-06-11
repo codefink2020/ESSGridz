@@ -14,6 +14,7 @@ export class GridComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  default: boolean = true;
 
   @Input()
   nRow: number = 5;
@@ -33,11 +34,14 @@ export class GridComponent implements OnInit {
   }
   rowChangedHandler(nRow: number) {
     this.nRow = nRow;
+    this.default = false;
     console.log(" row incoming in Grid" +  nRow)
   }
 
   colChangeHandler(nCol: number) {
+
     this.nCol = nCol;
+    this.default = false;
     console.log(" col incoming in Grid" +  nCol)
   }
 }

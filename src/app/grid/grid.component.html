@@ -12,8 +12,11 @@
         (onButtonClicked)="buttonChanged($event)">></app-cell></span>
   </div>
   <div class="gridText">
-    <p>given Collums: {{nCol}}</p>
-    <p> given rows: {{nRow}}</p>
+    <p *ngIf="default">given Collums from header: not set </p>
+    <p *ngIf="!default">given Collums from header: {{nCol}} </p>
+    <p *ngIf="default">given Rows from header: not set </p>
+    <p *ngIf="!default">given Rows from header: {{nCol}} </p>
+
   </div>
 
 </div>
