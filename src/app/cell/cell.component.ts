@@ -12,8 +12,7 @@ export class CellComponent implements OnInit {
 
 
   @Output() onButtonClicked: EventEmitter<number> = new EventEmitter<number>();
-  constructor() {
-  }
+
 
   ngOnInit(): void {
     console.log("Init state: nClicked: " + this.buttonsClicked)

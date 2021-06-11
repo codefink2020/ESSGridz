@@ -6,14 +6,12 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
+  ngOnInit(): void {
+      throw new Error('Method not implemented.');
+  }
 
   public nButtonsClicked: number = 0;
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
   default: boolean = true;
 
   @Input()

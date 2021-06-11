@@ -22,8 +22,6 @@ export class HeaderComponent implements OnInit {
   // @Output()
   // nCol: number = 5
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
