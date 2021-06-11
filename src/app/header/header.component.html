@@ -1,4 +1,35 @@
 <header class="header">
-  <H1>Welkom @ Gridz</H1>
-  <p>Geopende Vakken: ##</p>
+  <div class="wrapper">
+
+    <div class="left">
+        <H1>Welkom @ Gridz</H1>
+        <p>Geopende Vakken: {{nButtonsClicked}}</p>
+    </div>
+    <div class="center">
+      <div><!-- TODO werkend maken-->
+        <label class="label-margin" for="width">Breedte Grid</label>
+        <input
+          type="text"
+          id="width"
+          name="width"
+          [value]="breedte"
+          placeholder="breedte invoeren aub"><br>
+
+        <label class="label-margin"for="height">Hoogte Grid</label>
+        <input
+          type="text"
+          id="height"
+          name="height"
+          [value]="hoogte"
+          placeholder="hoogte invoeren aub"
+        >
+        <br>
+        <button  (click)="setButtonClicked()" class="set-button">Set</button>
+      </div>
+    </div>
+    <div class="right">
+      <p>Bas Brunink</p>
+    </div>
+  </div>
+
 </header>

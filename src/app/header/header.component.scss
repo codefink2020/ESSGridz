@@ -1,5 +1,45 @@
+@import "~src/styles";
 .header {
-  background-color: aqua;
+  height: $header_height;
+  background-color: #718faa;
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
+}
+h1 {
+  font-size: xx-large;
+  text-align: center;
+}
+p{
+  margin-top: 1rem;
+  font-size:x-large;
+  text-align: center;
+}
+
+.wrapper {
+  width:100%;
+  height:$header_height;
+  display: table;
+}
+
+.left {
+  height: $header_height;
+  width: 20%;
+  display: table-cell;
+}
+.center{
+  height: $header_height;
+  width: 60%;
+  display: table-cell;
+  text-align: center;
+}
+.right {
+  height: $header_height;
+  width: 20%;
+  display: table-cell;
+}
+.label-margin {
+  margin-right: 20px
+}
+.set-button {
+  height:25px;
+  width: 100px;
 }

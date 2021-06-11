@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridComponent implements OnInit {
 
+  public nButtonsClicked: number = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +21,10 @@ export class GridComponent implements OnInit {
     column(n:number):Array<number> {
     return Array(n)
     }
+  buttonChanged(event: number): void {
+    this.nButtonsClicked = this.nButtonsClicked + event;
+  }
+
 }
 
 

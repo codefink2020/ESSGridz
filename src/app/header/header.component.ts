@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  @Input()
+  public nButtonsClicked: number = 0;
+  @Output()
+  public breedte:number = 5;
+  @Output()
+  public hoogte:number = 5;
   ngOnInit(): void {
   }
 
+  setButtonClicked() {
+    console.log(this.breedte + " " + this.hoogte)
+  }
 }

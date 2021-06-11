@@ -1,6 +1,20 @@
-.cell {
-  border-color: black;
-  border-width: 1px;
-  border-radius:1px;
-  padding: 32px 32px;
+@import "~src/styles";
+$eagleImageSize: 100px;
+
+.cellactive {
+  background-color: #718faa;
+  border-radius: 25%;
+  padding: $cell_padding $cell_padding;
+  margin: $cell_margin;
 }
+
+.eagleLogoinActive{
+  width: $eagleImageSize;
+  height: auto;
+  visibility: hidden;
+}
+.eagleLogoActive{
+  width: $eagleImageSize;
+  height: auto;
+}
+
