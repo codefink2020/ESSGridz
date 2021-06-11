@@ -1,23 +1,39 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
   @Input()
   public nButtonsClicked: number = 0;
-  @Output()
-  public breedte:number = 5;
-  @Output()
-  public hoogte:number = 5;
+
+
+  breedte: number = 0;
+  hoogte: number = 0;
+  @Output() emitHoogte: EventEmitter<any> = new EventEmitter<any>()
+  @Output()  emitBreedte: EventEmitter<number> = new EventEmitter<number>()
+  // @Output()
+  // nRow: number = 10
+  // @Output()
+  // nCol: number = 5
+
+  constructor() { }
+
   ngOnInit(): void {
   }
 
-  setButtonClicked() {
-    console.log(this.breedte + " " + this.hoogte)
+  @Output()
+  setButtonClicked(nRow: string, nCol: string) {
+    this.breedte = parseInt(nCol);
+    this.hoogte = parseInt(nRow);
+    this.emitHoogte.emit(this.hoogte);
+    this.emitBreedte.emit(this.breedte);
+    console.log(" Data from header: "+ nRow + " " + nCol)
   }
+
 }

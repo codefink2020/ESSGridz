@@ -1,5 +1,9 @@
+
 <app-header
   [nButtonsClicked]="nButtonsClicked"
+
+  (emitHoogte)="rowChangedHandler($event)"
+  (emitBreedte)="colChangeHandler($event)"
 ></app-header>
 <div class="grid">
   <div *ngFor="let n of row(nRow)">
@@ -7,6 +11,11 @@
       <app-cell
         (onButtonClicked)="buttonChanged($event)">></app-cell></span>
   </div>
+  <div class="gridText">
+    <p>given Collums: {{nCol}}</p>
+    <p> given rows: {{nRow}}</p>
+  </div>
+
 </div>
 
 

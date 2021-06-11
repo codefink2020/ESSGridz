@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-grid',
@@ -8,23 +8,38 @@ import { Component, OnInit } from '@angular/core';
 export class GridComponent implements OnInit {
 
   public nButtonsClicked: number = 0;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
-    }
+  }
 
-    nRow:number = 10;
-    nCol:number = 5
-    row(n: number):Array<number> {
+  @Input()
+  nRow: number = 5;
+  @Input()
+  nCol: number = 5;
+
+  row(n: number): Array<number> {
     return Array(n)
-    }
-    column(n:number):Array<number> {
+  }
+
+  column(n: number): Array<number> {
     return Array(n)
-    }
+  }
+
   buttonChanged(event: number): void {
     this.nButtonsClicked = this.nButtonsClicked + event;
   }
+  rowChangedHandler(nRow: number) {
+    this.nRow = nRow;
+    console.log(" row incoming in Grid" +  nRow)
+  }
 
+  colChangeHandler(nCol: number) {
+    this.nCol = nCol;
+    console.log(" col incoming in Grid" +  nCol)
+  }
 }
 
 
